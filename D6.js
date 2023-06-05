@@ -31,7 +31,7 @@ const rngNumbers = () => {
 }
 // rngNumbers()
 
-/* ESERCIZIO 3
+/* ESERCIZIO 3 (filter)
   Scrivi una funzione per ricavare solamente i valori PARI da un array composto da soli valori numerici (suggerimento: il metodo filter può aiutare)
 */
 
@@ -40,6 +40,7 @@ const myNumberArray = rngNumbers()
 const evenNumber = (myArray = myNumberArray) => {
   const even = myArray.filter((n) => n % 2 === 0)
   console.log(even)
+  return even
 }
 // evenNumber()
 
@@ -48,10 +49,11 @@ const evenNumber = (myArray = myNumberArray) => {
 */
 
 // ANSWER EX4
-let total = 0
 const sumForEach = (myArray = myNumberArray) => {
+  let total = 0
   const sum = myArray.forEach((n) => total += n)
   console.log(total)
+  return total
 }
 // sumForEach()
 
@@ -63,6 +65,7 @@ const sumForEach = (myArray = myNumberArray) => {
 const sumReduce = (myArray = myNumberArray) => {
   const sum = myArray.reduce((total, n) => total + n )
   console.log("Total is", sum)
+  return sum
 }
 // sumReduce()
 
@@ -74,6 +77,7 @@ const sumReduce = (myArray = myNumberArray) => {
 const numPlus = (myArray = myNumberArray, n) => {
   const plus = myArray.map((myArray) => myArray + n)
   console.log(plus)
+  return plus
 }
 // numPlus(myNumberArray, 5)
 
@@ -89,9 +93,10 @@ const elemOfArrayLength = (myArray = myArrayString) => {
   const x = myArray.forEach((element) => {
     myArrayLength.push(element.length)
 })
+console.log(myArrayLength)
+return myArrayLength
 }
 // elemOfArrayLength()
-// console.log(myArrayLength)
 
 /* ESERCIZIO 9
   Scrivi una funzione per creare un array contenente tutti i valori DISPARI da 1 a 99.
@@ -104,6 +109,7 @@ const unevenNumbers = () => {
     unevenArray.push(i)
   }
   console.log(unevenArray)
+  return unevenArray
 }
 // unevenNumbers()
 
